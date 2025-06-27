@@ -81,11 +81,9 @@ cd Java-HTTP-Server-Based-Portfolio-and-Admin-Interface
 
 ### 3. Configure the Application
 
-The application's configuration is managed through a `config.properties` file.
-
 1.  **Create the Config File**: In the root of the project, find the `config.properties.template` file. Make a copy of it and rename the copy to `config.properties`.
 
-2.  **Update Database Credentials**: Open `config.properties` and fill in your MySQL database details.
+2.  **Update Database Credentials**: Open `` and fill in your MySQL database details.
 
     ```properties
     db.url=jdbc:mysql://localhost:3306/my_http_server
