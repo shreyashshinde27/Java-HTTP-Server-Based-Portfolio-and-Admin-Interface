@@ -22,7 +22,7 @@ A custom, lightweight HTTP server built from scratch in Java. This project serve
 
 - **Custom HTTP Server**: Built from the ground up using Java's `java.net` library to handle HTTP requests.
 - **Static File Serving**: Serves HTML, CSS, JavaScript, and image files for the portfolio website.
-- **RESTful API**: Provides endpoints for CRUD (Create, Read, Delete) operations on contact messages.
+- **RESTful API**: Provides endpoints for CRUD (Create, Read, Update, Delete) operations on contact messages.
 - **MySQL Integration**: Connects to a MySQL database to persist and manage messages.
 - **Secure Admin Panel**: A separate admin page to view and delete messages, protected by a security token.
 - **Email Notifications**: Automatically sends an email notification to the administrator when a new contact message is received.
