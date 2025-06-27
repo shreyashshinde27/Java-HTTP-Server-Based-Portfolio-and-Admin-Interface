@@ -81,9 +81,9 @@ cd Java-HTTP-Server-Based-Portfolio-and-Admin-Interface
 
 ### 3. Configure the Application
 
-1.  **Create the Config File**: In the root of the project, find the `config.properties.template` file. Make a copy of it and rename the copy to `config.properties`.
+1.  **Create the Config File**: In the root of the project, find the `config.properties` file. Enter your email and App password in it. follow Step - 3 to Create App password if you don't have it.
 
-2.  **Update Database Credentials**: Open `` and fill in your MySQL database details.
+2.  **Update Database Credentials**: Open `DatabaseManager.java` and fill in your MySQL database details.
 
     ```properties
     db.url=jdbc:mysql://localhost:3306/my_http_server
@@ -103,6 +103,10 @@ cd Java-HTTP-Server-Based-Portfolio-and-Admin-Interface
     - Give it a descriptive name like `Java Portfolio Server` and click **Generate**.
     - Google will generate a **16-character password**. Copy this password (without spaces).
 
+    OR
+
+    - visit this URL to create one - https://myaccount.google.com/apppasswords
+
     Now, paste this password into your `config.properties` file along with your Gmail address.
 
     ```properties
@@ -113,7 +117,7 @@ cd Java-HTTP-Server-Based-Portfolio-and-Admin-Interface
 4.  **Set Admin Token**: Create a secret token for accessing the admin panel.
 
     ```properties
-    admin.token=your-super-secret-admin-token
+    admin.token=admin-secret-token
     ```
 
 ### 4. Compile and Run
@@ -142,7 +146,7 @@ You should see the output `Server started on port 8080`.
 ## Usage
 
 - **View the Portfolio**: Open your web browser and navigate to `http://localhost:8080`.
-- **Access the Admin Panel**: Navigate to `http://localhost:8080/admin.html`. You will be prompted to enter the `admin.token` you set in `config.properties`.
+- **Access the Admin Panel**: Navigate to `http://localhost:8080/admin`. You will be prompted to enter the `admin.token` which is `admin-secret-token`.
 
 ## API Endpoints
 
