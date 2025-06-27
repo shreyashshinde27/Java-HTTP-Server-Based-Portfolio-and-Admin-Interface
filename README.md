@@ -128,20 +128,14 @@ Open your terminal in the project's root directory and run the following command
 
 ```bash
 # For Windows
-javac -d bin -cp "lib/mysql-connector-j-8.4.0.jar" src/com/shreyash/server/*.java src/com/shreyash/server/handlers/*.java
-
-# For macOS/Linux
-javac -d bin -cp "lib/mysql-connector-j-8.4.0.jar:." src/com/shreyash/server/*.java src/com/shreyash/server/handlers/*.java
+javac -d . -cp ".;lib/mysql-connector-j-9.3.0.jar;lib/jbcrypt-0.4.jar;lib/jakarta.mail-2.0.1.jar;lib/jakarta.activation-2.0.1.jar" src/*.java
 ```
 
 **Run the HTTP Server:**
 
 ```bash
 # For Windows
-java -cp "bin;lib/mysql-connector-j-8.4.0.jar" com.shreyash.server.HttpServer
-
-# For macOS/Linux
-java -cp "bin:lib/mysql-connector-j-8.4.0.jar" com.shreyash.server.HttpServer
+java -cp ".;lib/mysql-connector-j-9.3.0.jar;lib/jbcrypt-0.4.jar;lib/jakarta.mail-2.0.1.jar;lib/jakarta.activation-2.0.1.jar" HttpServer
 ```
 
 You should see the output `Server started on port 8080`.
@@ -188,6 +182,6 @@ JAVA HTTP SERVER-BASED PORTFOLIO AND ADMIN INTERFACE
 │   ├── download_bootstrap.ps1
 │   └── index.html
 └── README.md
-
+└── config.properties
 ```
 
