@@ -1,6 +1,7 @@
 # Shreyash's Portfolio (Static Site for GitHub Pages)
 
 This branch contains the **static, frontend-only** version of Shreyash's portfolio website, designed for deployment on [GitHub Pages](https://pages.github.com/). All backend code and dependencies have been removed—only HTML, CSS, JavaScript, and assets remain.
+
 **Live Demo:** https://shreyashshinde27.github.io/MyPortfolio/
 
 ## 📁 Project Structure
