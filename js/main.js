@@ -22,36 +22,38 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Form submission handling
+// Form submission handling for Formspree
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
 
-        // Get form data
-        const name = contactForm.querySelector('input[placeholder="Your Name"]').value.trim();
-        const email = contactForm.querySelector('input[placeholder="Your Email"]').value.trim();
-        const message = contactForm.querySelector('textarea[placeholder="Your Message"]').value.trim();
+        // Remove any previous alerts
+        const prevAlert = document.querySelector('.alert');
+        if (prevAlert) prevAlert.remove();
 
-        // Prepare JSON
-        const data = { name, email, message };
-
+        const formData = new FormData(contactForm);
         try {
-            const response = await fetch('/api/contact', {
+            const response = await fetch(contactForm.action, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
+                body: formData,
+                headers: { 'Accept': 'application/json' }
             });
-            const result = await response.json();
-            if (response.ok && result.success) {
-                showAlert('Thank you for your message! I will get back to you soon.', 'success');
+            if (response.ok) {
+                showAlert('Thank you! Your message has been sent.', 'success');
                 contactForm.reset();
             } else {
-                showAlert(result.error || 'There was a problem submitting your message.', 'danger');
+                showAlert('Oops! There was a problem sending your message.', 'danger');
             }
-        } catch (err) {
-            showAlert('There was a problem submitting your message.', 'danger');
+        } catch (error) {
+            showAlert('Network error. Please try again later.', 'danger');
         }
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
     });
 }
 

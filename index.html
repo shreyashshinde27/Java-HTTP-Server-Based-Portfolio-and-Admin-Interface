@@ -173,7 +173,7 @@
         <div class="container">
             <h2 class="section-title">Resume</h2>
             <div class="text-center">
-                <a href="assets/resume.pdf" class="btn btn-primary btn-lg" download>
+                <a href="https://drive.google.com/file/d/1gs85B6uyHLEplKGDkjkbcvOIfQnv3dNu/view" class="btn btn-primary btn-lg" download>
                     <i class="fas fa-download me-2"></i>Download Resume
                 </a>
             </div>
@@ -186,15 +186,16 @@
             <h2 class="section-title">Contact</h2>
             <div class="row">
                 <div class="col-lg-6">
-                    <form id="contact-form">
+                    <form id="contact-form" action="https://formspree.io/f/mzzgykbg" method="POST">
+                        <input type="hidden" name="_redirect" value="success.html">
                         <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
+                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                         </div>
                         <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Your Email" required>
+                            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
                         </div>
                         <div class="mb-3">
-                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                            <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
