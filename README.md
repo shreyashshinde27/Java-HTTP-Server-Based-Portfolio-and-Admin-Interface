@@ -2,6 +2,8 @@
 
 A custom, lightweight HTTP server built from scratch in Java. This project serves a responsive personal portfolio website and includes a secure admin interface for managing contact form submissions, complete with database integration and email notifications.
 
+**Live Demo:** https://shreyashshinde27.github.io/MyPortfolio/
+
 ![Portfolio Screenshot](web/assets/Portfolio.png)
 ![Admin Screenshot](web/assets/Admin.png)
 
